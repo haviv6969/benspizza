@@ -8,8 +8,122 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Frank+Ruhl+Libre:wght@700;900&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/index-DaE0qUBi.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-zcVor5P7.css">
+    <style>
+:root {
+  --red: #e83b28;
+  --cream: #f4eddf;
+  --ink: #161512;
+  --green: #36543c;
+  --line: rgba(22,21,18,.18);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: "Assistant", sans-serif; }
+a { color: inherit; text-decoration: none; }
+.site-header { height: 86px; padding: 0 4vw; display: flex; align-items: center; gap: 4vw; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; background: rgba(244,237,223,.94); backdrop-filter: blur(14px); }
+.brand { display: inline-flex; flex-direction: column; align-items: center; line-height: .85; transform: rotate(-2deg); direction: ltr; }
+.brand-main { font: 900 29px/1 "Frank Ruhl Libre"; letter-spacing: -2px; }
+.brand-sub { font-size: 6px; letter-spacing: 1.6px; margin-top: 5px; }
+nav { display: flex; gap: 30px; margin-inline-start: auto; font-weight: 700; }
+nav a:hover { color: var(--red); }
+.order-button { display: inline-flex; align-items: center; gap: 25px; padding: 16px 22px; background: var(--red); color: #fff; border: 1px solid var(--red); font-weight: 800; transition: .2s; }
+.order-button:hover { background: var(--ink); border-color: var(--ink); transform: translateY(-2px); }
+.order-button--small { padding: 11px 17px; gap: 12px; }
+.hero { min-height: calc(100vh - 86px); display: grid; grid-template-columns: 47% 53%; }
+.hero-copy { padding: 8vw 7vw 5vw 5vw; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.eyebrow { color: var(--red); font-weight: 800; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 22px; }
+h1,h2 { font-family: "Frank Ruhl Libre"; letter-spacing: -3px; margin: 0; line-height: .92; }
+h1 { font-size: clamp(68px, 8vw, 130px); }
+h1 em { color: var(--red); font-style: italic; }
+.hero-lead { font-size: 20px; line-height: 1.6; max-width: 520px; margin: 32px 0; }
+.hero-actions { display: flex; align-items: center; gap: 28px; }
+.text-link { font-weight: 800; border-bottom: 1px solid; padding: 8px 0; }
+.quick-facts { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 60px; border-top: 1px solid var(--line); padding-top: 20px; font-size: 12px; }
+.quick-facts span { display: flex; flex-direction: column; gap: 3px; }
+.quick-facts b { font-size: 16px; }
+.hero-visual { background: linear-gradient(0deg, rgba(0,0,0,.14), transparent), url("https://imageproxy.wolt.com/assets/67335de6f89eb96f4520cec3?w=1600") center/cover; position: relative; min-height: 620px; }
+.stamp { position: absolute; top: 7%; right: 8%; width: 110px; height: 110px; border-radius: 50%; display: grid; place-content: center; text-align: center; background: var(--cream); border: 2px solid var(--ink); font: 800 13px/1.15 "Assistant"; transform: rotate(9deg); }
+.stamp b { font: 900 26px "Frank Ruhl Libre"; color: var(--red); }
+.hero-caption { position: absolute; bottom: 30px; right: 30px; color: #fff; font-weight: 800; }
+.marquee { overflow: hidden; background: var(--red); color: #fff; padding: 14px 0; direction: ltr; white-space: nowrap; font: 900 18px "Frank Ruhl Libre"; letter-spacing: 1px; }
+.marquee div { width: max-content; animation: move 22s linear infinite; }
+@keyframes move { to { transform: translateX(-50%); } }
+.story { padding: 9vw 6vw; display: grid; grid-template-columns: 1fr 1.1fr .7fr; gap: 7vw; align-items: center; border-bottom: 1px solid var(--line); }
+h2 { font-size: clamp(58px, 7vw, 105px); }
+.story-copy { font-size: 19px; line-height: 1.8; }
+.story-card { aspect-ratio: 1; border-radius: 50%; background: var(--green); color: #fff; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 30px; transform: rotate(-7deg); }
+.story-card span { font-size: 12px; letter-spacing: 2px; }
+.story-card b { font: 900 36px "Frank Ruhl Libre"; margin: 10px 0; }
+.story-card small { line-height: 1.5; }
+.menu-section { padding: 8vw 5vw 10vw; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 45px; }
+.section-heading p:last-child { max-width: 370px; line-height: 1.6; }
+.category-nav { display: flex; gap: 8px; overflow-x: auto; border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 35px; scrollbar-width: none; }
+.category-nav button { white-space: nowrap; border: 1px solid var(--ink); background: transparent; padding: 10px 18px; font: 700 15px "Assistant"; cursor: pointer; }
+.category-nav button.active, .category-nav button:hover { background: var(--ink); color: #fff; }
+.menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.menu-card { background: #faf6ee; border: 1px solid var(--line); transition: .25s; display: flex; flex-direction: column; }
+.menu-card:hover { transform: translateY(-7px); box-shadow: 8px 10px 0 var(--ink); }
+.menu-image { aspect-ratio: 1.55; background-position: center; background-size: cover; position: relative; }
+.menu-image--empty { background: var(--green); color: var(--cream); display: grid; place-content: center; font: 900 28px "Frank Ruhl Libre"; direction: ltr; letter-spacing: -1px; }
+.popular { position: absolute; top: 12px; right: 12px; background: var(--red); color: white; padding: 6px 10px; font-size: 11px; font-weight: 800; }
+.menu-info { padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex: 1; min-height: 180px; }
+.menu-info h3 { margin: 0 0 8px; font: 900 25px/1.1 "Frank Ruhl Libre"; }
+.menu-info p { color: #69645c; margin: 0; line-height: 1.45; }
+.menu-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; }
+.menu-bottom b { font-size: 20px; }
+.menu-add { width: 35px; height: 35px; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-content: center; font-size: 24px; line-height: 1; }
+.delivery { min-height: 440px; background: var(--green); color: #fff; padding: 6vw; display: grid; grid-template-columns: .7fr 1fr .7fr; gap: 5vw; align-items: center; }
+.delivery-mark { aspect-ratio: 1; max-width: 270px; background: var(--red); border-radius: 50%; display: grid; place-content: center; text-align: center; font: 900 46px/.78 "Frank Ruhl Libre"; transform: rotate(-8deg); }
+.delivery-mark span { font-size: 27px; letter-spacing: 7px; }
+.delivery .eyebrow { color: #ffad9f; }
+.order-button--light { background: var(--cream); color: var(--ink); border-color: var(--cream); justify-self: end; }
+footer { padding: 55px 5vw 30px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; align-items: start; }
+.brand--footer { align-items: flex-start; justify-self: start; transform: none; }
+footer div { display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5; }
+footer small { grid-column: 1/-1; border-top: 1px solid var(--line); padding-top: 20px; direction: ltr; }
+.mobile-order { display: none; }
+@media (max-width: 900px) {
+  .site-header nav { display: none; }
+  .site-header { justify-content: space-between; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-copy { padding: 80px 6vw; }
+  .hero-visual { min-height: 75vh; }
+  .story { grid-template-columns: 1fr; }
+  .story-card { max-width: 280px; }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .delivery { grid-template-columns: 1fr; }
+  .order-button--light { justify-self: start; }
+  footer { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 580px) {
+  body { padding-bottom: 70px; }
+  .site-header { height: 70px; }
+  .site-header { padding: 0 18px; }
+  .order-button--small { font-size: 12px; padding: 9px 11px; }
+  .hero { min-height: auto; }
+  .hero-copy { padding: 52px 20px 45px; }
+  h1 { font-size: 58px; }
+  .hero-lead { font-size: 17px; }
+  .hero-actions { width: 100%; gap: 16px; align-items: stretch; flex-direction: column; }
+  .hero-actions .order-button { justify-content: space-between; }
+  .hero-actions .text-link { align-self: flex-start; }
+  .quick-facts { margin-top: 40px; }
+  .quick-facts { gap: 16px; }
+  .hero-visual { min-height: 390px; }
+  .section-heading { display: block; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .menu-section, .delivery { padding: 60px 18px; }
+  .category-nav { margin-inline: -18px; padding-inline: 18px; }
+  .menu-info { min-height: 150px; }
+  .menu-card:hover { transform: none; box-shadow: none; }
+  .delivery-mark { max-width: 200px; }
+  footer { grid-template-columns: 1fr; }
+  footer { padding: 45px 20px 30px; }
+  .mobile-order { display: flex; position: fixed; bottom: 10px; left: 10px; right: 10px; z-index: 40; background: var(--red); color: #fff; padding: 15px 18px; justify-content: space-between; font-weight: 800; box-shadow: 0 6px 22px rgba(0,0,0,.25); }
+}
+
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -75,5 +189,105 @@
       <small>© 2026 BEN'S PIZZA</small>
     </footer>
     <a class="mobile-order" href="https://wolt.com/he/isr/tel-aviv/restaurant/bens-pizzeria" target="_blank" rel="noreferrer">להזמנה ומשלוח <span>↗</span></a>
+    <script type="module">
+const wolt = "https://wolt.com/he/isr/tel-aviv/restaurant/bens-pizzeria";
+const img = (path) => path ? `https://imageproxy.wolt.com/${path}${path.includes("?") ? "&" : "?"}w=600` : "";
+const externalImg = (url) => url;
+const item = (name, description, price, image = "") => ({ name, description, price, image });
+const itemIds = {
+  "אקסל":"674dce00ec6291c260ba90e1","באסקית אישית":"5e5b47ab2f00da82aedd38aa","בירה שחורה נשר מאלט - בקבוק":"66796383786a69a20e7e8aa9","טירמיסו":"6679629b90bace717d6656cd","מים בטעם ענבים":"6679635983c417331cd0252d","מים מינרליים נביעות":"667965bd348fc8869590a4f1","סודה קינלי":"674dceb2dbd729a8fa466832","סטלה ארטואה":"6729f1c2bfeb095ab90a181b","סלט קפרזה מגי":"6666ddd027af4af1688e254d","סלט שוק":"679b70133477bb943b0155a0","ספרייט - בקבוק זכוכית":"66796379613aa5959d8cfcb6","ספרייט זירו - בקבוק זכוכית":"6679637b2d8fd24e8acc0543","פאנטה קלאסי 350 מ״ל":"674dceec4d15f9ee385b4683","פוקאצ׳ת הבית":"6679668c7e9735f4bb0f5973","פטוצ׳יני":"6666ddd027af4af1688e2551","פיוז טי אפרסק":"66796351286d16e348aeb247","פיוז טי גדול":"67586d32297f8cd1e7806ab0","פיצה או לה לה | אישי":"68453028dd11ad44a82aeebc","פיצה או לה לה | לארג׳":"6666ddd027af4af1688e2547","פיצה אישית ללא גלוטן 🌾":"6666ddd027af4af1688e254b","פיצה ביאנקה | אישי":"68452f997204414e4a7b8f58","פיצה ביאנקה | לארג׳":"667961ff3f83a3de3b8ee38c","פיצה גלילית | אישי 🌶️":"68452f75045c578166084040","פיצה גלילית | לארג׳ 🌶️":"6666ddd027af4af1688e253f","פיצה מרגריטה | אישית":"674c7b8fcbe29956077d4f5a","פיצה מרגריטה | לארג׳":"6666ddd027af4af1688e253b","פיצה נוטלה":"6666ddd027af4af1688e2557","פיצה פופאי | אישי":"68452fd7920b9fc22ba54c04","פיצה פופאי | לארג׳":"66b9d539d8f0491bd2ecfd8a","פסטה פנה ללא גולטן 🌾":"66f2ba6e284f16acd40e28ff","פריגת אשכוליות - בקבוק זכוכית":"6679637e616f6627d7a20556","פריגת ענבים - בקבוק זכוכית":"66796380786a69a20e7e8a9e","פריגת תפוזים":"674dd006877d0aa57eb6ab59","קולה זירו - 1.5 ליטר":"66d457fb299041e6addf47bb","קולה זירו - בקבוק זכוכית":"667963745599c5dd55ef2ad8","קוקה קולה - 1.5 ליטר":"66d457fd2a620a268196a41a","קוקה קולה - בקבוק זכוכית":"667963715599c5dd55ef2ad4","קלצונה נוטלה מסקרפונה":"66f2bac920fa15e7c861c71e","רביולי בטטה":"6666ddd027af4af1688e2555","רביולי גבינות":"6666ddd027af4af1688e2553","רדיאטורה":"6666ddd027af4af1688e254f"
+};
+const orderUrl = (name) => itemIds[name] ? `${wolt}/itemid-${itemIds[name]}` : wolt;
+
+const menu = {
+  "פיצות אישיות": [
+    item("פיצה מרגריטה | אישית", "רוטב עגבניות, מוצרלה ארטיג'אנלה", 46, img("menu/menu-images/6666ddbd5ff26691f1a16902/d2f05d38-aff6-11ef-876a-b6215a4ae311_8cf94a60ed27346ebd24c7ab519b732b.jpg")),
+    item("פיצה גלילית | אישי 🌶️", "רוטב עגבניות, מוצרלה ארטיג׳אנלה, בולגרית, לאבנה, זעתר ונגיעות שמן צ׳ילי חריף", 60, img("menu/menu-images/shared/94a1ea24-3472-11ef-b303-92c6f5bb5fd8____________.jpg")),
+    item("פיצה ביאנקה | אישי", "רוטב שמנת כמהין ופרמז'ן, פטריות, שרי, פלפל חריף, אורוגולה ושמן זית", 60, img("menu/menu-images/shared/9dc2227c-3472-11ef-bca8-aa00929f3485_____________1.jpg")),
+    item("פיצה פופאי | אישי", "תרד, מוצרלה, גבינה בולגרית ושמן זית", 60, img("menu/menu-images/shared/d2343b72-c6bb-11ef-83b6-e68744b619c1_________________.jpeg")),
+    item("פיצה או לה לה | אישי", "רוטב עגבניות, מוצרלה ארטיג׳אנלה, גבינת עיזים, ארטישוק, גרידת לימון, אורוגולה ושמן זית", 60, img("menu/menu-images/shared/97a54522-3472-11ef-91fc-ee65a8f8ca9b______________.jpg"))
+  ],
+  "פיצות לארג׳": [
+    item("פיצה מרגריטה | לארג׳", "רוטב עגבניות ומוצרלה ארטיג׳אנלה", 74, img("menu/menu-images/shared/92d1cbe2-3472-11ef-a86c-2245d3a105eb_____________.jpg")),
+    item("פיצה גלילית | לארג׳ 🌶️", "רוטב עגבניות, מוצרלה ארטיג׳אנלה, גבינה בולגרית, זיתי קלמטה, שמן צ׳ילי, לאבנה אסלית וזעתר", 89, img("menu/menu-images/shared/94a1ea24-3472-11ef-b303-92c6f5bb5fd8____________.jpg")),
+    item("פיצה או לה לה | לארג׳", "רוטב עגבניות, מוצרלה ארטיג׳אנלה, גבינת עיזים, ארטישוק, גרידת לימון, אורוגולה ושמן זית", 89, img("menu/menu-images/shared/97a54522-3472-11ef-91fc-ee65a8f8ca9b______________.jpg")),
+    item("פיצה ביאנקה | לארג׳", "רוטב שמנת כמהין ופרמז'ן, פטריות, שרי, פלפל חריף, אורוגולה ושמן זית", 98, img("menu/menu-images/shared/9dc2227c-3472-11ef-bca8-aa00929f3485_____________1.jpg")),
+    item("פוקאצ׳ת הבית", "שמן זית, עגבניה, מוצרלה וארטישוק", 49, img("menu/menu-images/shared/b999ef5c-3472-11ef-87b7-92c6f5bb5fd8________.jpg")),
+    item("פיצה פופאי | לארג׳", "תרד, מוצרלה, גבינה בולגרית ושמן זית", 89, img("menu/menu-images/shared/d2343b72-c6bb-11ef-83b6-e68744b619c1_________________.jpeg"))
+  ],
+  "ללא גלוטן": [
+    item("פסטה פנה ללא גולטן 🌾", "פסטה פנה ללא גלוטן, מוקפצת ברוטב לבחירה עם גבינת פרמז'ן מגורדת", 48, img("menu/menu-images/shared/8d8c0ebe-7fe4-11ef-b2b4-92bc7c39eb44__________.jpg")),
+    item("פיצה אישית ללא גלוטן 🌾", "בצק ללא גלוטן, רוטב עגבניות, מוצרלה ארטיג׳אנלה ותוספת לבחירה", 44, img("menu/menu-images/shared/bb40e104-c6bb-11ef-942a-4e8207d3d158_____________________.jpeg"))
+  ],
+  "סלטים": [
+    item("סלט קפרזה מגי", "עגבניות מגי, קרעי מוצרלה, בלסמי, בזיליקום ומלח גס", 47, img("menu/menu-images/shared/bd279e8a-3472-11ef-811f-7ade7deb80cf__________.jpg")),
+    item("סלט שוק", "גמבות, חסה, עגבניה, מלפפון, קלמטה, ארטישוק, צנונית, מלח, פלפל, לימון ושמן זית", 55, img("menu/menu-images/shared/82d8063a-fa7d-11ef-b85b-62b760d4a3de________.jpeg"))
+  ],
+  "פסטות": [
+    item("רדיאטורה", "בחרו רוטב לפסטה", 48, img("menu/menu-images/shared/d8953704-3472-11ef-b4f7-0239e89718d1________________.jpg")),
+    item("פטוצ׳יני", "בחרו רוטב לפסטה", 48, img("menu/menu-images/shared/df3e2c14-3472-11ef-9a07-2245d3a105eb_______________________________.jpg")),
+    item("רביולי גבינות", "בחרו רוטב לפסטה", 58, img("menu/menu-images/shared/df2c4856-c6bb-11ef-8a5b-129c52a4bf33______________.jpeg")),
+    item("רביולי בטטה", "בחרו רוטב לפסטה", 58, img("menu/menu-images/shared/edb3696c-3472-11ef-b696-de0a42ef0c5b____________________.jpg"))
+  ],
+  "מתוקים": [
+    item("פיצה נוטלה", "", 40, img("menu/menu-images/shared/bfa3f380-c6bb-11ef-9f1b-ce32c7e45647___________.jpeg")),
+    item("טירמיסו", "", 39, img("menu/menu-images/shared/08509524-3473-11ef-b66a-16a19b953b41_______.jpg")),
+    item("קלצונה נוטלה מסקרפונה", "מאפה קלצונה ממכר- ממולא בנוטלה ומסקפורנה", 39, img("menu/menu-images/shared/d7ec4a32-c6bb-11ef-8793-2abb3b3f73ef______________________.jpeg")),
+    item("באסקית אישית", "", 44)
+  ],
+  "בירה | יין": [
+    item("סטלה ארטואה", "0.33 ליטר | 5% | 18+", 19, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/0c9d65dc-f8ec-11eb-a7ad-6eb8ab816b95_stella_artois.jpeg?overlay=isr-softalcohol&w=600"))
+  ],
+  "שתייה קלה": [
+    item("אקסל", "250 מ״ל", 11, img("assets/667947bda81b94465521a45a")),
+    item("פיוז טי אפרסק", "0.5 ליטר", 12, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/dc602cbc-f8e9-11eb-a705-c268f97193e5_fuze_tea_peach_500ml.jpeg?w=600")),
+    item("פאנטה קלאסי 350 מ״ל", "350 מ״ל", 13, img("assets/681769ef82f00f6d6fdb5f18?overlay=isr-sugar")),
+    item("פריגת תפוזים", "ללא חומר משמר וללא צבעים מלאכותיים", 11, img("assets/6817695f58425492357cf35f?overlay=isr-sugar")),
+    item("פריגת אשכוליות - בקבוק זכוכית", "0.33 ליטר", 11, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/0b637006-f8e9-11eb-a39c-467f67de554e_52887_mashkal_2020_grapefruit_330ml_wolt_1440x810.jpeg?w=600")),
+    item("פריגת ענבים - בקבוק זכוכית", "0.33 ליטר", 11, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/05bccf94-f8e9-11eb-ae94-c268f97193e5_52887_labels_mashkal_2020_grape_330ml_wolt_1440x810.jpeg?w=600")),
+    item("קוקה קולה - בקבוק זכוכית", "0.33 ליטר", 13, img("assets/696f6ba1a83c417aa7e1fcd2")),
+    item("קולה זירו - בקבוק זכוכית", "0.33 ליטר", 13, img("assets/6679424f2f2a0839d4ca055c")),
+    item("ספרייט - בקבוק זכוכית", "0.33 ליטר", 13, img("menu/menu-images/63480b5dbb341bcc8029fff7/1c9e4434-9642-11ed-b1c9-0ec7cfff7570______________.jpeg")),
+    item("ספרייט זירו - בקבוק זכוכית", "0.33 ליטר", 13, img("menu/menu-images/63480b5dbb341bcc8029fff7/26dcab34-9642-11ed-81ee-f27dbf3d73ec___________________.jpeg")),
+    item("מים בטעם ענבים", "0.5 ליטר", 11, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/56e8d004-e176-11ec-8be0-0e9221c23326_7290002331711.jpeg?w=600")),
+    item("בירה שחורה נשר מאלט - בקבוק", "0.5 ליטר", 16, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/d210ee3e-f8eb-11eb-a31c-6eb8ab816b95_________.jpeg?w=600")),
+    item("סודה קינלי", "0.25 ליטר", 11, img("assets/6a15964b1e6b60de516fb4e9")),
+    item("מים מינרליים נביעות", "0.5 ליטר", 9, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/7da3790a-e29a-11eb-b3c3-22915ab626ac________________________.jpeg?w=600")),
+    item("קולה זירו - 1.5 ליטר", "1.5 ליטר", 16, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/4df22460-f8f0-11eb-b0d4-dee9e2704e20___________________.jpeg?w=600")),
+    item("קוקה קולה - 1.5 ליטר", "1.5 ליטר", 16, externalImg("https://image-resizer-proxy.development.dev.woltapi.com/wolt-dev-development-restaurant-api-menu-images/menu-images/5fbe3d6b40ccbfedccfd71a0/53040ee6-f8f0-11eb-b0d4-dee9e2704e20___________________.jpeg?w=600")),
+    item("פיוז טי גדול", "", 16, img("menu/menu-images/shared/75ed545e-b714-11ef-9f0f-6ae1bbf4058d_dc602cbc_f8e9_11eb_a705_c268f97193e5_fuze_tea_peach_500ml.jpeg"))
+  ]
+};
+
+const nav = document.querySelector("#categoryNav");
+const grid = document.querySelector("#menuGrid");
+let active = Object.keys(menu)[0];
+
+function render() {
+  nav.innerHTML = Object.keys(menu).map(category =>
+    `<button class="${category === active ? "active" : ""}" data-category="${category}">${category}</button>`
+  ).join("");
+
+  grid.innerHTML = menu[active].map((entry) => `
+    <a class="menu-card" href="${orderUrl(entry.name)}" target="_blank" rel="noreferrer" aria-label="${entry.name} - להזמנה">
+      ${entry.image
+        ? `<div class="menu-image" style="background-image:url('${entry.image}')"></div>`
+        : `<div class="menu-image menu-image--empty"><span>BEN'S PIZZA</span></div>`}
+      <div class="menu-info">
+        <div><h3>${entry.name}</h3>${entry.description ? `<p>${entry.description}</p>` : ""}</div>
+        <div class="menu-bottom"><b>₪${entry.price}</b><span class="menu-add">+</span></div>
+      </div>
+    </a>
+  `).join("");
+
+  nav.querySelectorAll("button").forEach(button => button.addEventListener("click", () => {
+    active = button.dataset.category;
+    render();
+  }));
+}
+
+render();
+
+    </script>
   </body>
 </html>
